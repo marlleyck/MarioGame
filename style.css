@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: pixel;
+    src: url(font/PixelGameFont.ttf);
+}
+
+
+.game-board {
+    width: 80vw;
+    height: 500px;
+    margin: 0 auto;
+    border: 1px solid black;
+    position: relative;
+    overflow: hidden;
+
+    background-image: linear-gradient(360deg,#FFF 20%, #8ED1EE);
+}
+
+.clouds {
+    width: 500px;
+    position: absolute;
+    top: 0;
+    animation: nuvens 8.5s infinite linear;
+}
+
+.pipe {
+    width: 80px;
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+.pipe2 {
+    width: 80px;
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    animation: pipe-animation 1.5s infinite 1.8s linear;
+    display: none;
+}
+
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.point {
+    font-family: pixel;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 82%;
+    top: 2%;
+    color: white;
+
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.point p {
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+#ponto {
+    margin-right: 100px;
+}
+
+
+.contagem {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 600px;
+    height: 120px;
+}
+
+.contagem h2 {
+    font-family: pixel;
+    font-size: 35px;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
+    color: black;
+
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contagem p {
+    font-family: pixel;
+    font-size: 40px;
+    color: #FFA24A;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: (-50%, -50%);
+}
+
+.over-tela {
+    width: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+@keyframes pipe-animation {
+    from {
+        left: 100%;
+    }
+    to {
+        left: -80px;
+    }
+}
+
+@keyframes jump {
+    0% {    
+        bottom: 0;
+    }
+    40% {
+        bottom: 150px;
+    }
+    50% {
+        bottom: 150px;
+    }
+    60% {
+        bottom: 150px;
+    }
+    70% {
+        bottom: 150px;
+    }
+    75% {
+        bottom: 150px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes nuvens {
+    from {
+        left: 120%;
+    }
+
+    to {
+        left: -500px;
+    }
+}
